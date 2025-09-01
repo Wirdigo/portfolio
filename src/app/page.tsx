@@ -1,5 +1,7 @@
 import Image from "next/image";
 import image from "../../public/myImage.png"
+import Link from 'next/link'
+
 export default function Home() {
   return (
     <div className="px-40 flex flex-1 justify-center py-5">
@@ -18,15 +20,15 @@ export default function Home() {
                                 Fullstack Developer
                             </h1>
                             <h2 className="text-white text-sm font-normal leading-normal @[480px]:text-base @[480px]:font-normal @[480px]:leading-normal">
-                                Crafting seamless digital experiences with a passion for innovation and clean
-                                code.
+                                Perseverance and resilience are my two best friends.
                             </h2>
                         </div>
+                        <Link href={"/Projects"}>
                         <button
                             className="flex min-w-[84px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-full h-10 px-4 @[480px]:h-12 @[480px]:px-5 bg-[#39e079] text-[#122118] text-sm font-bold leading-normal tracking-[0.015em] @[480px]:text-base @[480px]:font-bold @[480px]:leading-normal @[480px]:tracking-[0.015em]"
                         >
                             <span className="truncate">View Portfolio</span>
-                        </button>
+                        </button></Link>
                     </div>
                 </div>
             </div>

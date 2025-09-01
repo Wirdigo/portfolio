@@ -31,7 +31,7 @@ export default function RootLayout({
           <div className="layout-container flex h-full grow flex-col">
               <TheHeader/>
               {children}
-              <TheFooter/>
+              {/*<TheFooter/>*/}
           </div>
       </div>
       </body>
