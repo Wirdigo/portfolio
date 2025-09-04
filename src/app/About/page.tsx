@@ -3,8 +3,13 @@ import SkillCard from "@/ui/SkillCard";
 import Code from "@/icons/Code";
 import Database from "@/icons/Database";
 import GitCommit from "@/icons/GitCommit";
+import skill from "@/types/Skill";
 export default function About() {
-    const skills = {}
+    const skills : skill[] = [
+        {IconComponent: Code, cardInfo: "HTML, CSS, JavaScript, React, Angular", cardTitle: "Front-End Development", dataIcon: "Code"},
+        {IconComponent: Database, cardInfo: "MySQL, PostgreSQL,MongoDB", cardTitle: "Database Management", dataIcon: "Database"},
+        {IconComponent: Code, cardInfo: "Node.js, Python, Java", cardTitle: "Back-End Development", dataIcon: "Code"},
+        {IconComponent: GitCommit, cardInfo: "Git, GitHub, GitLab", cardTitle: "Version Control", dataIcon: "GitCommit"}]
   return (
       <div className="px-40 flex flex-1 justify-center py-5">
           <div className="layout-content-container flex flex-col max-w-[960px] flex-1">
@@ -22,6 +27,7 @@ export default function About() {
 
               <h3 className="text-white text-lg font-bold leading-tight tracking-[-0.015em] px-4 pb-2 pt-4">Skills</h3>
               <div className="grid grid-cols-[repeat(auto-fit,minmax(158px,1fr))] gap-3 p-4">
+                  {skills.map((<SkillCard dataIcon={} IconComponent={} cardTitle={} cardInfo={}/>)=>{})}
                   <SkillCard IconComponent={Code} cardInfo={"HTML, CSS, JavaScript, React, Angular"} cardTitle={"Front-End Development"} dataIcon={"Code"}/>
                   <SkillCard IconComponent={Database} cardInfo={"MySQL, PostgreSQL,MongoDB"} cardTitle={"Database Management"} dataIcon={"Database"}/>
                   <SkillCard IconComponent={Code} cardInfo={"Node.js, Python, Java,"} cardTitle={"Back-End Development"} dataIcon={"Code"}/>
