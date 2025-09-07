@@ -8,11 +8,14 @@ interface SkillCardProps {
     cardTitle : string;
     cardInfo: string;
 }
-export default function SkillCard ({dataIcon, IconComponent, cardTitle, cardInfo } : SkillCardProps)
+export default function SkillCard ({dataIcon, IconComponent, cardTitle, cardInfo, iconSize = 24, className = "text-white"
+
+                                   } :
+    SkillCardProps)
 {
     return (
         <div className="flex flex-1 gap-3 rounded-lg border border-[#3d5245] bg-[#1c2620] p-4 flex-col">
-            <div className="text-white" data-icon={dataIcon} data-size="24px" data-weight="regular">
+            <div className={className} data-icon={dataIcon}  data-size={`${iconSize}px`} data-weight="regular" aria-hidden="true">
                 <IconComponent/>
             </div>
             <div className="flex flex-col gap-1">

@@ -1,6 +1,6 @@
 import {FC, SVGProps} from "react";
 
-export default interface skill{
+export default interface SkillItem {
     cardId: number;
     dataIcon: string;
     IconComponent: FC<SVGProps<SVGElement>>;
