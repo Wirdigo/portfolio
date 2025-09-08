@@ -8,9 +8,7 @@ interface SkillCardProps {
     cardTitle : string;
     cardInfo: string;
 }
-export default function SkillCard ({dataIcon, IconComponent, cardTitle, cardInfo, iconSize = 24, className = "text-white"
-
-                                   } :
+export default function SkillCard ({dataIcon, IconComponent, cardTitle, cardInfo, iconSize = 24, className = "text-white"} :
     SkillCardProps)
 {
     return (

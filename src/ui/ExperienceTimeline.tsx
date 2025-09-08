@@ -28,7 +28,6 @@ export default function ExperienceTimeline() {
                 const isFirst = idx === 0;
                 const isLast = idx === EXPERIENCE.length - 1;
                 return (
-                    // Using a fragment to keep the 2-column grid structure per item
                     <div key={`${item.title}-${item.period}`} className="contents">
                         <TimelineMarker showTop={!isFirst} showBottom={!isLast} />
                         <article className="flex flex-1 flex-col py-3">

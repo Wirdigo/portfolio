@@ -7,7 +7,15 @@ const nextConfig: NextConfig = {
             use: ['@svgr/webpack']
         });
         return config;
-    }
+    },
+    images: {
+        remotePatterns: [
+            {
+                protocol: 'https', // Specify HTTPS protocol
+                hostname: 'placehold.co', // The hostname of the external image source
+            },
+        ],
+    },
 };
 
 export default nextConfig;
